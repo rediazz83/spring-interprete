@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="interpreteEspaniol" class="beans.InterpreteEspaniol" />
+	<bean id="interpreteIngles" class="beans.InterpreteIngles" />
+	<bean id="interpreteFrances" class="beans.InterpreteFrances" />
+
+	<bean id="traductorEspaniol" class="beans.Traductor">
+		<property name="interprete" ref="interpreteEspaniol" />
+		<property name="nombre" value="Rodrigo Díaz" />
+	</bean>
+
+	<bean id="traductorIngles" class="beans.Traductor">
+		<property name="interprete" ref="interpreteIngles" />
+		<property name="nombre" value="Pamela Mejias" />
+	</bean>
+
+	<bean id="traductorFrances" class="beans.Traductor">
+		<property name="interprete" ref="interpreteFrances" />
+		<property name="nombre" value="Fernanda Díaz" />
+	</bean>
+
+</beans>

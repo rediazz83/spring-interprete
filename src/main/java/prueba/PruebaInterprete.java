@@ -1,6 +1,6 @@
 package prueba;
 
-import beans.InterpreteEspaniol;
+import beans.InterpreteIngles;
 import beans.Traductor;
 
 public class PruebaInterprete {
@@ -9,7 +9,7 @@ public class PruebaInterprete {
 		Traductor traductor = new Traductor();		
 		//Inyeccion manual del interprete.
 		//Obligado a solo un idioma
-		traductor.setInterprete(new InterpreteEspaniol());
+		traductor.setInterprete(new InterpreteIngles());
 		traductor.setNombre("Johnny");
 		traductor.hablar();
 	}
